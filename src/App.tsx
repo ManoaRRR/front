@@ -1,25 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
+import Webcam from "react-webcam";
 import './App.css';
 
 function App() {
+    const WebcamComponent = () => <Webcam />;
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+        <header>
+            <div className="container">
+                <div className="header-bar">
+                    <h1 className="logo">HEI</h1>
+                    <ul className="slider-menu">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Services</li>
+                    </ul>
+                </div>
+            </div>
+            <h3>Presence en reconnaissance facial</h3>
+        </header>
+
+        <form method="POST">
+        <input type="file" multiple />
+            <p>Drag your files here or click in this area.</p>
+            <button type="submit" className="bg-prim">Presence</button>
+            <a href="" className="bg-red" id="reset">Réinitialiser</a>
+    </form>
+    </>
   );
 }
 

@@ -1,38 +1,204 @@
-.App {
-  text-align: center;
+body{
+    background: rgba(0,0,0,0.9);
+}
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -100px;
+    margin-left: -250px;
+    width: 500px;
+    height: 200px;
+    border: 4px dashed #fff;
+}
+form p{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 170px;
+    color: #ffffff;
+}
+form input{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+}
+form button{
+    color: #fff;
+    border: none;
+    width: 508px;
+    height: 35px;
+    border-radius: 6px;
+    transition: all .2s ease;
+    outline: none;
+}
+form button:hover{
+    background: #32be9f;
+    color: #ffffff;
+}
+form button:active{
+    border:0;
+}
+.bg-red{
+    margin: 3px;
+    background-color: #d92626;
+    color: #201e1e;
+    font-family: Arial;
+    font-size: 13.3333px;
+}
+.bg-prim{
+    margin: 3px;
+    background-color: #ffae00;
+    color: #201e1e;
+}
+#reset:hover{
+    background-color: #8d3030;
+    color: red;
+}
+#reset{
+    border: none;
+    width: 508px;
+    height: 35px;
+    border-radius: 6px;
+    transition: all .2s ease;
+    writing-mode: horizontal-tb !important;
+    display: inline-block;
+    align-items: flex-start;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 1px 6px;
+    border-image: initial;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+}
+*{padding: 0; margin: 0; box-sizing: border-box;}
+body{
+    height: 900px;
+}
+header {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #333;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffae00;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3, p {
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+header button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    background: #fff;
+    margin-bottom: 50px;
+    box-shadow: 0 3px 20px 0 #0000003b;
+}
+button:hover{
+    cursor: pointer;
+}
+header button {
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.lead { font-family: 'Quicksand'; }
+.header-bar {
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    height: 50px;
+    border: 10px solid transparent;
+    border-top: 10px solid #fffa;
+    border-left: 10px solid #fffa;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.25) inset;
 }
+.header-bar::after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 30%;
+    height: 49px;
+    border: 10px solid transparent;
+    border-bottom: 10px solid #fffa;
+    border-right: 10px solid #fffa;
+    transition: 0.3s linear all;
+}
+.header-bar > .logo {
+    position: absolute;
+    top: calc(50% - 20px);
+    left: 10px;
+    transform: translateY(-50%);
+    color: #fffc;
+    font-family: 'Parisienne', cursive;
+    cursor: default;
+    user-select: none;
+}
+.slider-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+.slider-menu > li {
+    display: inline-flex;
+    padding: 14px;
+    margin-left: 2px;
+    font-family: 'Quicksand', sans-serif;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s linear all;
+    user-select: none;
+}
+.slider-menu > li:hover {
+    color: #faa;
+    box-shadow: 0 50px 5px rgba(0, 0, 0, 0.15) inset;
+}
+.aeu-signature {
+    position: fixed;
+    top: 5px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 15px;
+    line-height: 30px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border-radius: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+.aeu-signature { font-family: "Quicksand"; }
+.aeu-signature > img { height: 30px; }
